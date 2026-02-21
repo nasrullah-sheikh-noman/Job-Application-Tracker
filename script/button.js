@@ -4,11 +4,15 @@ document.querySelectorAll(".card button").forEach((btn) => {
 
     if (card.classList.contains("locked")) return;
 
+    const btntext = document.querySelectorAll(".btntext");
+
     if (this.classList.contains("interview-btn")) {
       const headerInterview = document.getElementById("header-interview");
       const interviewCount = headerInterview.innerHTML;
       const newCount = Number(interviewCount) + 1;
       headerInterview.innerText = newCount;
+
+      btntext.innerText = "Applied";
     } 
     else if (this.classList.contains("reject-btn")) {
       const headerRejected = document.getElementById("header-rejected");
