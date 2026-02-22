@@ -48,20 +48,20 @@
     </header>
 
     <!-- body  -->
-    <section class="p-6 space-y-6">
+    <section class=" p-6 space-y-6">
       <div class="flex justify-between">
         <h2 class="text-2xl font-semibold">Available Jobs</h2>
         <p class="font-medium">8 jobs</p>
       </div>
       <div class="space-y-6">
         <div>
-          <button class="btn btn-primary">All</button>
-          <button class="btn btn-primary">Interview</button>
-          <button class="btn btn-primary">Rejected</button>
+          <button id="all-list" class="btn btn-primary">All</button>
+          <button id="interview-list" class="btn btn-primary">Interview</button>
+          <button id="rejected-list" class="btn btn-primary">Rejected</button>
         </div>
 
         <!-- all cards -->
-        <div class="space-y-8">
+        <div id="allList" class="space-y-8">
           <div
             class="card border border-gray-300 bg-base-200 shadow-2xl rounded-2xl p-8 space-y-4"
           >
@@ -372,7 +372,7 @@
         </div>
 
         <!-- blank page  -->
-         <div class="flex flex-col items-center border border-gray-300 shadow-lg rounded-xl py-24 bg-base-100 hidden">
+         <div id="blank-page" class="flex flex-col items-center border border-gray-300 shadow-lg rounded-xl py-24 bg-base-100 hidden">
           <img src="./assets/jobs.png" alt="">
           <h2 class="text-2xl font-bold text-gray-600">No jobs available</h2>
           <h5 class="text-gray-400 text-xl">Check back soon for new job opportunities</h5>
@@ -380,7 +380,8 @@
 
       </div>
     </section>
-
+    
     <script src="./script/button.js"></script>
+    <script src="./script/list.js"></script>
   </body>
 </html>
