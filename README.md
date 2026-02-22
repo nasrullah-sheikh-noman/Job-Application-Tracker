@@ -16,4 +16,4 @@
 
 ## Question-5. What is the difference between preventDefault() and stopPropagation() methods?
 
--- Ans: preventDefault stop default action and stopPropagation method stops event flow like bubbling or capturing.
+# Ans: preventDefault stop default action and stopPropagation method stops event flow like bubbling or capturing.
