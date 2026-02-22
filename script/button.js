@@ -16,7 +16,8 @@ document.querySelectorAll(".card .actions button").forEach((btn) => {
       statusBtn.innerText = "Applied";
       statusBtn.classList = "btn btn-success";
 
-
+      card.style.borderLeft = " 5px solid green";
+      card.style.transition = ".3s ease-in-out";
 
     } else if (this.classList.contains("reject-btn")) {
 
@@ -28,6 +29,8 @@ document.querySelectorAll(".card .actions button").forEach((btn) => {
       statusBtn.innerText = "Rejected";
       statusBtn.classList = "btn btn-error";
 
+      card.style.borderLeft = " 5px solid red";
+      card.style.transition = ".3s ease-in-out";
     }
 
     card.classList.add("locked");
