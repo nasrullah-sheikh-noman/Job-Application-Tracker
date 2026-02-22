@@ -1,10 +1,10 @@
-document.querySelectorAll(".card button").forEach((btn) => {
+document.querySelectorAll(".card .actions button").forEach((btn) => {
   btn.addEventListener("click", function () {
-    const card = this.parentElement;
+    const card = this.closest(".card");
+
+    const statusBtn = card.querySelector(".status-btn");
 
     if (card.classList.contains("locked")) return;
-
-    const btntext = document.querySelectorAll(".btntext");
 
     if (this.classList.contains("interview-btn")) {
       const headerInterview = document.getElementById("header-interview");
@@ -12,17 +12,18 @@ document.querySelectorAll(".card button").forEach((btn) => {
       const newCount = Number(interviewCount) + 1;
       headerInterview.innerText = newCount;
 
-      btntext.innerText = "Applied";
-    } 
-    else if (this.classList.contains("reject-btn")) {
+      statusBtn.innerText = "Applied";
+      statusBtn.classList = "btn btn-success";
+    } else if (this.classList.contains("reject-btn")) {
       const headerRejected = document.getElementById("header-rejected");
       const rejectCount = headerRejected.innerHTML;
       const newCount = Number(rejectCount) + 1;
       headerRejected.innerText = newCount;
+
+      statusBtn.innerText = "Rejected";
+      statusBtn.classList = "btn btn-error";
     }
 
-    this.classList.add("locked");
-
-    card.querySelectorAll("button").forEach(b => (b.disabled = true));
+    card.classList.add("locked");
   });
 });
