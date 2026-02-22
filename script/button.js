@@ -19,6 +19,10 @@ document.querySelectorAll(".card .actions button").forEach((btn) => {
       card.style.borderLeft = " 5px solid green";
       card.style.transition = ".3s ease-in-out";
 
+      card.classList.add("interview");
+
+
+
     } else if (this.classList.contains("reject-btn")) {
 
       const headerRejected = document.getElementById("header-rejected");
@@ -31,6 +35,8 @@ document.querySelectorAll(".card .actions button").forEach((btn) => {
 
       card.style.borderLeft = " 5px solid red";
       card.style.transition = ".3s ease-in-out";
+
+      card.classList.add("rejected")
     }
 
     card.classList.add("locked");
