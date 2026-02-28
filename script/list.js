@@ -24,7 +24,7 @@ allListBtn.addEventListener("click", function () {
   allListContainer.classList.remove("hidden");
 
   
-      document.getElementById("job-quantity").innerText = 8;
+  document.getElementById("job-quantity").innerText = 8;
 
   toggleBlankPage();
 
