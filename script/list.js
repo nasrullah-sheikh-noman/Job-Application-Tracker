@@ -22,6 +22,9 @@ allListBtn.addEventListener("click", function () {
   
   allListContainer.classList.remove("hidden");
 
+  
+      document.getElementById("job-quantity").innerText = 8;
+
   toggleBlankPage();
 
 });
@@ -29,19 +32,20 @@ allListBtn.addEventListener("click", function () {
 interviewListBtn.addEventListener("click", function () {
   cards.forEach(card => card.classList.add("hidden"));
 
+  const quantity = document.getElementById("job-quantity");
+  quantity.innerText = 0;
+
   cards.forEach(card => {
     if (card.classList.contains("interview")) {
       card.classList.remove("hidden");
+      const newQuantity = quantity.innerText;
+      quantity.innerText = Number(newQuantity) + 1;
     }
   })
 
   allListContainer.classList.remove("hidden");
 
-  // const interviewList = document.querySelectorAll(".card").length;
-  //   console.log(interviewList);
-  //   jobQuantity.innerHTML = interviewList;
-
-  document.getElementById("job-quantity").innerText = 0;
+  
 
 
   toggleBlankPage();
@@ -52,16 +56,21 @@ interviewListBtn.addEventListener("click", function () {
 rejectedListBtn.addEventListener("click", function () {
   cards.forEach(card => card.classList.add("hidden"));
 
+  const quantity = document.getElementById("job-quantity");
+  quantity.innerText = 0;
+
   cards.forEach(card => {
     if (card.classList.contains("rejected")) {
       card.classList.remove("hidden");
+      const newQuantity = quantity.innerText;
+      quantity.innerText = Number(newQuantity) + 1;
     }
   })
 
-  
-  document.getElementById("job-quantity").innerText = 0;
 
   allListContainer.classList.remove("hidden");
+
+
 
   toggleBlankPage();
   console.log("click 2");
