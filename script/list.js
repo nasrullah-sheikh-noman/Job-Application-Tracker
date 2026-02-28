@@ -4,6 +4,7 @@ const rejectedListBtn = document.getElementById("rejected-list");
 const allListContainer = document.getElementById("allList");
 const blankPage = document.getElementById("blank-page");
 const jobQuantity = document.getElementById("job-quantity");
+const deleteBtn = document.getElementById("delete-btn");
 
 const cards = document.querySelectorAll("#allList .card");
 
@@ -40,12 +41,11 @@ interviewListBtn.addEventListener("click", function () {
       card.classList.remove("hidden");
       const newQuantity = quantity.innerText;
       quantity.innerText = Number(newQuantity) + 1;
+      
     }
   })
 
   allListContainer.classList.remove("hidden");
-
-  
 
 
   toggleBlankPage();
@@ -64,6 +64,7 @@ rejectedListBtn.addEventListener("click", function () {
       card.classList.remove("hidden");
       const newQuantity = quantity.innerText;
       quantity.innerText = Number(newQuantity) + 1;
+
     }
   })
 
