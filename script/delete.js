@@ -8,17 +8,22 @@ deletes.forEach((dt) => {
     const card = this.closest(".card");
     card.remove();
 
+    if (card.classList.contains("interview")) {
       const interview = document.querySelectorAll(".interview").length;
       const hederInterviewCount = document.getElementById("header-interview");
       hederInterviewCount.innerText = interview;
-
+      jobId.innerText = interview;
+    }
+    else if (card.classList.contains("rejected")) {
       const rejected = document.querySelectorAll(".rejected").length;
       const hederRejectedCount = document.getElementById("header-rejected");
       hederRejectedCount.innerText = rejected;
-
-
-    const cardLeft = document.querySelectorAll(".card").length;
-    jobId.innerHTML = cardLeft;
+      jobId.innerText = rejected;
+    }
+    else {
+      const cardLeft = document.querySelectorAll(".card").length;
+      jobId.innerHTML = cardLeft;
+    }
 
     upJobId.innerHTML = cardLeft;
 
