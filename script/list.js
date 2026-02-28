@@ -23,8 +23,8 @@ allListBtn.addEventListener("click", function () {
   
   allListContainer.classList.remove("hidden");
 
-  
-  document.getElementById("job-quantity").innerText = 8;
+  const upJobQuantity = document.getElementById("up-job-quantity");
+  document.getElementById("job-quantity").innerText = upJobQuantity.innerHTML;
 
   toggleBlankPage();
 
@@ -46,6 +46,9 @@ interviewListBtn.addEventListener("click", function () {
   })
 
   allListContainer.classList.remove("hidden");
+
+  const headerInterviewList = document.getElementById("header-interview");
+  document.getElementById("job-quantity").innerText = headerInterviewList.innerHTML;
 
 
   toggleBlankPage();
@@ -71,7 +74,8 @@ rejectedListBtn.addEventListener("click", function () {
 
   allListContainer.classList.remove("hidden");
 
-
+  const headerRejectedList = document.getElementById("header-rejected");
+  document.getElementById("job-quantity").innerText = headerRejectedList.innerHTML;
 
   toggleBlankPage();
   console.log("click 2");
