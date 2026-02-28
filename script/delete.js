@@ -16,7 +16,7 @@ deletes.forEach((dt) => {
       const hederRejectedCount = document.getElementById("header-rejected");
       hederRejectedCount.innerText = rejected;
 
-      
+
     const cardLeft = document.querySelectorAll(".card").length;
     jobId.innerHTML = cardLeft;
 
